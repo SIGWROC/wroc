@@ -1,18 +1,18 @@
 <div class="bg-off-white pv4">
 	<div class="ph3 mw7 center">
 
-		<h2 class="f2 b lh-title mb3">stories</h2>
+		<h2 class="f2 b lh-title mb3">Bibliography</h2>
 
 		<div class="w-100 flex-ns mhn1-ns flex-wrap mb3">
-			{{ range first 4 (where .Data.Pages "Type" "post") }}
+			{{ range first 4 (where .Data.Pages "Type" "bibliography") }}
 				<div class="ph1-ns w-50-ns flex">
-					{{ .Render "li" }}
+					{{ .Render "li_bib" }}
 				</div>
 			{{ end }}
 		</div>
 
 		<div class="tc">
-			<a href="/post" class="btn raise">Read more</a>
+			<a href="/bibliography" class="btn raise">Read more</a>
 		</div>
 
 	</div>
