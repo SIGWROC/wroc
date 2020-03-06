@@ -5,6 +5,26 @@ media_folder: "site/static/img" # Folder where user uploaded files should go
 public_folder: "img"
 
 collections: # A list of collections the CMS should be able to edit
+  - name: "bibliography" # Used in routes, ie.: /admin/collections/:slug/edit
+    label: "Bibliography" # Used in the UI, ie.: "New Post"
+    folder: "site/content/bibliography" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    fields: # The fields each document in this collection have
+      - { label: 'PubType', name: 'pubtype', widget: 'select', options: ['journal', 'proceedings', 'book', 'chapter', 'edited collection'], required: false}
+      - {label: "Authors", name: "authors", widget: "string", required: false}
+      - {label: "Editors", name: "editors", widget: "string", required: false}
+      - {label: "Title", name: "title", widget: "string", required: false}
+      - {label: "Year", name: "year", widget: "string", required: false}
+      - {label: "Journal", name: "journal", widget: "string", required: false}
+      - {label: "Volume", name: "volume", widget: "string", required: false}
+      - {label: "Issue", name: "issue", widget: "string", required: false}
+      - {label: "Pages", name: "pages", widget: "string", required: false}
+      - {label: "Publisher", name: "publisher", widget: "string", required: false}
+      - {label: "URL", name: "url", widget: "string", required: false}
+      - {label: "DOI", name: "doi", widget: "string", required: false}
+      - {label: "Annotation", name: "annotation", widget: "markdown", required: false}
+      - {label: "Tags", name: "tags", widget: "list", fields: [{label: Name, name: name, widget: string, default: "tag", required: false}]}
+      - {label: "Fields",name: "fields",widget: "list",fields: [{label: Name, name: name, widget: string, default: "tag", required: false}]}
   - name: "post" # Used in routes, ie.: /admin/collections/:slug/edit
     label: "Post" # Used in the UI, ie.: "New Post"
     folder: "site/content/post" # The path to the folder where the documents are stored
