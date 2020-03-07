@@ -1,15 +1,7 @@
 {{ define "main" }}
 
-{{ partial "jumbotron" (dict "imageUrl" "/img/blog-index.jpg" "title" "Bibliograpy") }}
+{{ partial "jumbotron" (dict "title" "Bibliograpy") }}
 
-<div class="mw7 center">
-  <ul class="flex-ns flex-wrap mhn1-ns pa3 cite">
-    {{ range (where .Pages "Section" "bibliography") }}
-    <li>
-        {{ .Params.authors }}. ({{ .Params.year }}). {{ .Params.title }}. <em>{{ .Params.journal }}</em>, {{ .Params.volume }}({{ .Params.issue }}){{ if .Params.pages }}, pp. {{ .Params.pages }}{{end}}. <a href="{{ .Params.doi }}">{{ .Params.doi }}</a>
-    </li>
-    {{ end }}
-  </ul>
-</div>
+  {{ partial "bibliography/by-pub-type.html" . }}
 
 {{end}}

@@ -1,0 +1,23 @@
+<div class="mw7 center">
+  <ul class="flex-ns flex-wrap mhn1-ns pa3 cite">
+    {{ range (where .Pages "Section" "bibliography") }}
+    <li>
+        {{ .Params.authors }}. ({{ .Params.year }}). {{ .Params.title }}. <em>{{ .Params.journal }}</em>, {{ .Params.volume }}({{ .Params.issue }}){{ if .Params.pages }}, pp. {{ .Params.pages }}{{end}}. <a href="{{ .Params.doi }}">{{ .Params.doi }}</a>
+        {{ if .Params.tags }}
+          <p class="bib-tags">tags:
+            {{ range .Params.tags }}
+                <a href="{{ .Permalink }}">{{ .name }}</a>
+            {{ end }}
+          </p>
+        {{ end }}
+        {{ if .Params.fields }}
+          <p class="bib-tags">fields:
+            {{ range .Params.fields }}
+                <a href="{{ .Permalink }}">{{ .name }}</a>
+            {{ end }}
+          </p>
+        {{ end }}
+    </li>
+    {{ end }}
+  </ul>
+</div>

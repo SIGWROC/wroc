@@ -3,3 +3,7 @@ ul.cite li {
   text-indent: -0.5in;
   margin-bottom: 10px;
 }
+li p.bib-tags {
+  margin-left: 0.5in;
+  margin-bottom: 0;
+}

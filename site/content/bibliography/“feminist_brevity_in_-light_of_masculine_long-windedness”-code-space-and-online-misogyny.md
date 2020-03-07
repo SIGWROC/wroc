@@ -12,6 +12,7 @@ pages: 675-685
 annotation: ''
 tags:
   - name: misogyny
+  - name: esoteric codes
 fields:
   - name: feminist studies
   - name: media studies
