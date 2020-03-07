@@ -11,7 +11,9 @@ issue: '4'
 pages: 675-685
 annotation: ''
 tags:
-  - name: tag
+  - name: misogyny
 fields:
-  - name: tag
+  - name: feminist studies
+  - name: media studies
+  - name: rhetoric
 ---
