@@ -3,14 +3,15 @@
 {{ partial "jumbotron" (dict "imageUrl" "/img/blog-index.jpg" "title" "Bibliograpy") }}
 
 <div class="mw7 center">
-  <ul class="flex-ns flex-wrap mhn1-ns pa3">
-      {{ range (.Paginator 4).Pages }}
-          <div class="w-50-ns ph1-ns flex">
-            {{ .Render "li"}}
-          </div>
+  <ul class="flex-ns flex-wrap mhn1-ns pa3 cite">
+    {{ range (where .Pages "Section" "bibliography") }}
+    <li>
+      {{ if .Params.journal }}
+        {{ .Params.authors }}. ({{ .Params.year }}). {{ .Params.title }}. <em>{{ .Params.journal }}</em>, {{ .Params.volume }}({{ .Params.issue }}), pp. {{ .Params.pages }}. <a href="{{ .Params.doi }}">{{ .Params.doi }}</a>.
       {{ end }}
+    </li>
+    {{ end }}
   </ul>
-  {{ partial "pagination" . }}
 </div>
 
 {{end}}

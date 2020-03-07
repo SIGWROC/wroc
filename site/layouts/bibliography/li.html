@@ -1,4 +1,10 @@
 <div class="no-underline pa3 bg-grey-1 br1 mb2 db raise w-100">
-  <h2 class="f3 b lh-title mb1 primary">{{ .Title }}</h2>
-  <p class="link b dib black mb0">Read more →</p>
+  <p>{{ .Title }}</p>
+  <ul>
+    {{ range (where .Pages "Section" "bibliography") }}
+    <li>
+        {{ .Title }}
+    </li>
+    {{ end }}
+  </ul>
 </div>
