@@ -14,7 +14,6 @@ blurb:
 intro:
   heading: Test
   text: Test
-products: []
 values:
   heading: Our values
   text: >-

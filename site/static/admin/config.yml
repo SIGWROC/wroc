@@ -10,6 +10,9 @@ collections: # A list of collections the CMS should be able to edit
     folder: "site/content/bibliography" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
+      - {label: "PubType", name: "pubtype", widget: "object", fields: [
+              {label: "Journal", name: "journal", widget: bool},
+              {label: "Book", name: "book", widget: "bool"}]}
       - {label: "Authors", name: "authors", widget: "string", required: false}
       - {label: "Editors", name: "editors", widget: "string", required: false}
       - {label: "Title", name: "title", widget: "string", required: false}
@@ -43,15 +46,12 @@ collections: # A list of collections the CMS should be able to edit
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Subtitle, name: subtitle, widget: string}
-          - {label: Image, name: image, widget: image}
+          - {label: Image, name: image, widget: image, required: false}
           - {label: "Blurb", name: blurb, widget: object, fields: [
               {label: "Heading", name: "heading", widget: string},
               {label: "Text", name: "text", widget: "text"}]}
           - {label: "Intro", name: intro, widget: object, fields: [
               {label: "Heading", name: "heading", widget: string},
-              {label: "Text", name: "text", widget: "text"}]}
-          - {label: "Products", name: products, widget: list, fields: [
-              {label: "Image", name: "image", widget: "image"},
               {label: "Text", name: "text", widget: "text"}]}
           - {label: "Values", name: "values", widget: "object", fields: [
               {label: "Heading", name: "heading", widget: string},
