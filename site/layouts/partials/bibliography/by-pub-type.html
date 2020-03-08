@@ -5,15 +5,15 @@
         {{ .Params.authors }}. ({{ .Params.year }}). {{ .Params.title }}. <em>{{ .Params.journal }}</em>, {{ .Params.volume }}({{ .Params.issue }}){{ if .Params.pages }}, pp. {{ .Params.pages }}{{end}}. <a href="{{ .Params.doi }}">{{ .Params.doi }}</a>
         {{ if .Params.tags }}
           <p class="bib-tags">tags:
-            {{ range .Params.tags }}
-                <a href="{{ .Permalink }}">{{ .name }}</a>
+            {{ range (.GetTerms "tags") }}
+              <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>
             {{ end }}
           </p>
         {{ end }}
         {{ if .Params.fields }}
           <p class="bib-tags">fields:
-            {{ range .Params.fields }}
-                <a href="{{ .Permalink }}">{{ .name }}</a>
+            {{ range (.GetTerms "fields") }}
+              <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>
             {{ end }}
           </p>
         {{ end }}

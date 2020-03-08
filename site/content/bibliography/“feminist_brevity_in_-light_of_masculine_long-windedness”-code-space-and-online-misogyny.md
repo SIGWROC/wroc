@@ -10,11 +10,6 @@ volume: '18'
 issue: '4'
 pages: 675-685
 annotation: ''
-tags:
-  - name: misogyny
-  - name: esoteric codes
-fields:
-  - name: feminist studies
-  - name: media studies
-  - name: rhetoric
+tags: ["misogyny", "esoteric codes"]
+fields: ["feminist studies", "media studies", "rhetoric"]
 ---

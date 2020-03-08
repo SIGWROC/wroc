@@ -1,2 +1,6 @@
 languageCode = "en-us"
-title = "My New Netlify Victor Hugo Site"
+title = "WROC"
+[taxonomies]
+  tag = "tags"
+  category = "categories"
+  field = "fields"

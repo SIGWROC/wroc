@@ -23,8 +23,8 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "URL", name: "url", widget: "string", required: false}
       - {label: "DOI", name: "doi", widget: "string", required: false}
       - {label: "Annotation", name: "annotation", widget: "markdown", required: false}
-      - {label: "Tags", name: "tags", widget: "list", fields: [{label: Name, name: name, widget: string, default: "tag", required: false}]}
-      - {label: "Fields",name: "fields",widget: "list",fields: [{label: Name, name: name, widget: string, default: "tag", required: false}]}
+      - {label: "Tags", name: "tags", widget: "list"}
+      - {label: "Fields",name: "fields", widget: "list"}
   - name: "post" # Used in routes, ie.: /admin/collections/:slug/edit
     label: "Post" # Used in the UI, ie.: "New Post"
     folder: "site/content/post" # The path to the folder where the documents are stored
@@ -100,3 +100,8 @@ collections: # A list of collections the CMS should be able to edit
               - {label: Heading, name: heading, widget: string}
               - {label: Text, name: text, widget: text}
               - {label: Image, name: imageUrl, widget: image}
+
+taxonomies:
+  tag: tags
+  category: categories
+  field: fields

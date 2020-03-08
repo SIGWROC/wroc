@@ -12,8 +12,6 @@ pages: '31-56'
 url: www.licsjournal.org/OJS/index.php/LiCS/article/view/222
 doi: https://dx.doi.org/10.21623%2F1.7.2.3
 annotation: Test annotation.
-tags:
-  - name: coding camps
-fields:
-  - name: literacy studies
+tags: ["coding camps"]
+fields: ["literacy studies", "African American Rhetorics"]
 ---

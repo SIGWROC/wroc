@@ -1,0 +1,16 @@
+{{ define "main" }}
+
+{{ partial "jumbotron" (dict "imageUrl" "/img/blog-index.jpg" "title" "Meta") }}
+
+<div class="mw7 center">
+  <h2 class="meta-h2">{{ .Page.LinkTitle }}</h2>
+  <ul class="flex-ns flex-wrap mhn1-ns pa3 cite">
+    {{ range .Pages }}
+    <li>
+        {{ .Params.authors }}. ({{ .Params.year }}). {{ .Params.title }}. <em>{{ .Params.journal }}</em>, {{ .Params.volume }}({{ .Params.issue }}){{ if .Params.pages }}, pp. {{ .Params.pages }}{{end}}. <a href="{{ .Params.doi }}">{{ .Params.doi }}</a>
+    </li>
+    {{ end }}
+  </ul>
+</div>
+
+{{end}}
