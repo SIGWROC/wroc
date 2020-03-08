@@ -1,5 +1,4 @@
 ---
-pubtype: journal
 authors: 'Byrd, Antonio'
 title: >-
   Between Learning and Opportunity: A Study of African American Coders’ Networks

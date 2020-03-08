@@ -1,5 +1,4 @@
 ---
-pubtype: book
 authors: 'Vee, Annette'
 title: 'Coding Literacy: How Computer Programming Is Changing Writing'
 year: '2017'

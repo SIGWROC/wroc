@@ -1,5 +1,4 @@
 ---
-pubtype: journal
 authors: 'Easter, Brandee'
 title: >-
   “feminist_brevity_in_ light_of_masculine_long-windedness”: Code, space, and
