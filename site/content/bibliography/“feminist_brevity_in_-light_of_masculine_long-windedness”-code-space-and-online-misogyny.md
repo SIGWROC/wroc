@@ -9,7 +9,16 @@ journal: Feminist Media Studies
 volume: '18'
 issue: '4'
 pages: 675-685
-annotation: ''
-tags: ["misogyny", "esoteric codes"]
-fields: ["feminist studies", "media studies", "rhetoric"]
+doi: 'https://doi.org/10.1080/14680777.2018.1447335'
+annotation: This is a test annotation.
+tags:
+  - misogyny
+  - esoteric codes
+  - digital manspreading
+  - gender
+  - digital infrastructures
+fields:
+  - feminist studies
+  - media studies
+  - rhetorical code studies
 ---
