@@ -11,8 +11,8 @@ collections: # A list of collections the CMS should be able to edit
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
       - {label: "PubType", name: "pubtype", widget: "object", fields: [
-              {label: "Journal", name: "journal", widget: bool},
-              {label: "Book", name: "book", widget: "bool"}]}
+              {label: "Journal", name: "journal", type: bool},
+              {label: "Book", name: "book", type: "bool"}]}
       - {label: "Authors", name: "authors", widget: "string", required: false}
       - {label: "Editors", name: "editors", widget: "string", required: false}
       - {label: "Title", name: "title", widget: "string", required: false}
