@@ -10,17 +10,6 @@ collections: # A list of collections the CMS should be able to edit
     folder: "site/content/bibliography" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     fields: # The fields each document in this collection have
-      - pubtype:
-        - name: journal
-          type: bool
-        - name: proceedings
-          type: bool
-        - name: book
-          type: bool
-        - name: chapter
-          type: bool
-        - name: editedcollection
-          type: bool
       - {label: "Authors", name: "authors", widget: "string", required: false}
       - {label: "Editors", name: "editors", widget: "string", required: false}
       - {label: "Title", name: "title", widget: "string", required: false}
