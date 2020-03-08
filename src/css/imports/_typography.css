@@ -151,12 +151,16 @@ h1.logo-text {
           transform: scale(var(--transform));
 }
 
+/* META TAGS */
 .meta-h2 {
   margin-top: 15px;
   font-size: 3vw;
   color: white;
   background-color: #ff7d4d;
   opacity: 0.8;
+}
+.bib-tags a:hover {
+  text-decoration: none;
 }
 
 @media (--breakpoint-not-small) {
