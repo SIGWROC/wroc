@@ -1,36 +1,27 @@
 ---
 title: WROC
 subtitle: The Writing and Rhetorics of Code
-image: /img/home-jumbotron.jpg
+image: img/android-chrome-192x192.png
 blurb:
   heading: WROC's Mission
-  text: Insert text here
-intro:
-  heading: What we offer
   text: >-
-    Kaldi is the ultimate spot for coffee lovers who want to learn about their
-    java’s origin and support the farmers that grew it. We take coffee
-    production, roasting and brewing seriously and we’re glad to pass that
-    knowledge to anyone.
-products:
-  - image: img/illustrations-coffee.svg
-    text: >-
-      We sell green and roasted coffee beans that are sourced directly from
-      independent farmers and farm cooperatives. We’re proud to offer a variety
-      of coffee beans grown with great care for the environment and local
-      communities. Check our post or contact us directly for current
-      availability.
-  - image: /img/illustrations-coffee-gear.svg
-    text: >-
-      We offer a small, but carefully curated selection of brewing gear and
-      tools for every taste and experience level. No matter if you roast your
-      own beans or just bought your first french press, you’ll find a gadget to
-      fall in love with in our shop.
+    We're acquainted with the wormhole phenomenon, but this... Is a remarkable
+    piece of bio-electronic engineering by which I see much of the EM spectrum
+    ranging from heat and infrared through radio waves, et cetera, and forgive
+    me if I've said and listened to this a thousand times. This planet's
+    interior heat provides an abundance of geothermal energy. We need to
+    neutralize the homing signal.
+intro:
+  heading: Test
+  text: Test
+products: []
 values:
   heading: Our values
   text: >-
-    Coffee is an amazing part of human culture but it has a dark side too – one
-    of colonialism and mindless abuse of natural resources and human lives. We
-    want to turn this around and return the coffee trade to the drink’s
-    exhilarating, empowering and unifying nature.
+    Shields up. I recommend we transfer power to phasers and arm the photon
+    torpedoes. Something strange on the detector circuit. The weapons must have
+    disrupted our communicators. You saw something as tasty as meat, but
+    inorganically materialized out of patterns used by our transporters.
+    Captain, the most elementary and valuable statement in science, the
+    beginning of wisdom, is 'I do not know.' All transporters off.
 ---
