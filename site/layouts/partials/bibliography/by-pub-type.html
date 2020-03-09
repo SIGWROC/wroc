@@ -27,7 +27,7 @@
   <ul class="flex-ns flex-wrap mhn1-ns pa3 cite">
     {{ range where .Site.Pages "Params.pubtype" "book" }}
     <li>
-        {{ .Params.authors }}. ({{ .Params.year }}). <em>{{ .Params.booktitle }}</em>. {{ .Params.publisher }}. {{ if .Params.doi }}<a href="{{ .Params.doi }}">{{ .Params.doi }}</a>{{ end }} {{ if .Params.url }}<a href="{{ .Params.url }}">{{ .Params.url }}</a>{{ end }}
+        {{ .Params.authors }}. ({{ .Params.year }}). <em>{{ .Params.title }}</em>. {{ .Params.publisher }}. {{ if .Params.doi }}<a href="{{ .Params.doi }}">{{ .Params.doi }}</a>{{ end }} {{ if .Params.url }}<a href="{{ .Params.url }}">{{ .Params.url }}</a>{{ end }}
         {{ if .Params.tags }}
           <p class="bib-tags">tags:
             {{ range (.GetTerms "tags") }}
