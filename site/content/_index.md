@@ -3,7 +3,7 @@ title: WROC
 subtitle: The Writing and Rhetorics of Code
 image: img/android-chrome-192x192.png
 blurb:
-  heading: WROC's Mission
+  heading: Mission
   text: >-
     We're acquainted with the wormhole phenomenon, but this... Is a remarkable
     piece of bio-electronic engineering by which I see much of the EM spectrum
@@ -13,7 +13,7 @@ blurb:
     neutralize the homing signal.
 intro:
   heading: Who are we?
-  text: 'Antonio Byrd, Brandee Easter, and Chris Lindgren. That''s who.'
+  text: 'Antonio Byrd, Brandee Easter, Chris Lindgren, and hopefully a wroc-solid crew. That''s who.'
 values:
   heading: Our values
   text: >-
