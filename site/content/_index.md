@@ -3,7 +3,7 @@ title: WROC
 subtitle: The Writing and Rhetorics of Code
 image: img/android-chrome-192x192.png
 blurb:
-  heading: "WROC's Mission"
+  heading: WROC's Mission
   text: >-
     We're acquainted with the wormhole phenomenon, but this... Is a remarkable
     piece of bio-electronic engineering by which I see much of the EM spectrum
@@ -12,8 +12,8 @@ blurb:
     interior heat provides an abundance of geothermal energy. We need to
     neutralize the homing signal.
 intro:
-  heading: Test
-  text: Test
+  heading: Who are we?
+  text: 'Antonio Byrd, Brandee Easter, and Chris Lindgren. That''s who.'
 values:
   heading: Our values
   text: >-
