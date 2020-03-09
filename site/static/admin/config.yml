@@ -14,6 +14,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Authors", name: "authors", widget: "string", required: false}
       - {label: "Editors", name: "editors", widget: "string", required: false}
       - {label: "Title", name: "title", widget: "string", required: false}
+      - {label: "Book Title", name: "booktitle", widget: "string", required: false}
       - {label: "Year", name: "year", widget: "string", required: false}
       - {label: "Journal", name: "journal", widget: "string", required: false}
       - {label: "Volume", name: "volume", widget: "string", required: false}

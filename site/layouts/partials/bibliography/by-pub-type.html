@@ -1,6 +1,8 @@
 <div class="mw7 center">
+
+  <h3 class="f3 b lh-title mb1">Articles</h3>
   <ul class="flex-ns flex-wrap mhn1-ns pa3 cite">
-    {{ range (where .Pages "Section" "bibliography") }}
+    {{ range where .Site.Pages "Params.pubtype" "journal" }}
     <li>
         {{ .Params.authors }}. ({{ .Params.year }}). {{ .Params.title }}. <em>{{ .Params.journal }}</em>, {{ .Params.volume }}({{ .Params.issue }}){{ if .Params.pages }}, pp. {{ .Params.pages }}{{end}}. <a href="{{ .Params.doi }}">{{ .Params.doi }}</a>
         {{ if .Params.tags }}
@@ -20,4 +22,51 @@
     </li>
     {{ end }}
   </ul>
+
+  <h3 class="f3 b lh-title mb1">Books</h3>
+  <ul class="flex-ns flex-wrap mhn1-ns pa3 cite">
+    {{ range where .Site.Pages "Params.pubtype" "book" }}
+    <li>
+        {{ .Params.authors }}. ({{ .Params.year }}). <em>{{ .Params.booktitle }}</em>. {{ .Params.publisher }}. {{ if .Params.doi }}<a href="{{ .Params.doi }}">{{ .Params.doi }}</a>{{ end }} {{ if .Params.url }}<a href="{{ .Params.url }}">{{ .Params.url }}</a>{{ end }}
+        {{ if .Params.tags }}
+          <p class="bib-tags">tags:
+            {{ range (.GetTerms "tags") }}
+              <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>
+            {{ end }}
+          </p>
+        {{ end }}
+        {{ if .Params.fields }}
+          <p class="bib-tags">fields:
+            {{ range (.GetTerms "fields") }}
+              <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>
+            {{ end }}
+          </p>
+        {{ end }}
+    </li>
+    {{ end }}
+  </ul>
+
+  <h3 class="f3 b lh-title mb1">Chapters and Edited Collections</h3>
+  <ul class="flex-ns flex-wrap mhn1-ns pa3 cite">
+    {{ range where .Site.Pages "Params.pubtype" "chapter" }}
+    <li>
+        {{ .Params.authors }}. ({{ .Params.year }}). {{ .Params.title }}. In {{ .Params.editors }}, (Ed), <em>{{ .Params.booktitle }}</em>{{ if .Params.pages }}, (pp. {{ .Params.pages }}){{ end }}. {{ .Params.publisher }}. {{ if .Params.doi }}<a href="{{ .Params.doi }}">{{ .Params.doi }}</a>{{ end }} {{ if .Params.url }}<a href="{{ .Params.url }}">{{ .Params.url }}</a>{{ end }}
+        {{ if .Params.tags }}
+          <p class="bib-tags">tags:
+            {{ range (.GetTerms "tags") }}
+              <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>
+            {{ end }}
+          </p>
+        {{ end }}
+        {{ if .Params.fields }}
+          <p class="bib-tags">fields:
+            {{ range (.GetTerms "fields") }}
+              <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>
+            {{ end }}
+          </p>
+        {{ end }}
+    </li>
+    {{ end }}
+  </ul>
+
 </div>
