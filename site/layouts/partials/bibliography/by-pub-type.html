@@ -2,7 +2,7 @@
 
   <h3 class="f3 b lh-title mb1">Articles</h3>
   <ul class="flex-ns flex-wrap mhn1-ns pa3 cite">
-    {{ range where .Site.Pages "Params.pubtype" "journal" }}
+    {{ range (where .Site.Pages "Params.pubtype" "journal") }}
     <li>
         {{ .Params.authors }}. ({{ .Params.year }}). {{ .Params.title }}. <em>{{ .Params.journal }}</em>, {{ .Params.volume }}({{ .Params.issue }}){{ if .Params.pages }}, pp. {{ .Params.pages }}{{end}}. <a href="{{ .Params.doi }}">{{ .Params.doi }}</a>
         {{ if .Params.tags }}
@@ -25,7 +25,7 @@
 
   <h3 class="f3 b lh-title mb1">Books</h3>
   <ul class="flex-ns flex-wrap mhn1-ns pa3 cite">
-    {{ range where .Site.Pages "Params.pubtype" "book" }}
+    {{ range (where .Site.Pages "Params.pubtype" "book") }}
     <li>
         {{ .Params.authors }}. ({{ .Params.year }}). <em>{{ .Params.title }}</em>. {{ .Params.publisher }}. {{ if .Params.doi }}<a href="{{ .Params.doi }}">{{ .Params.doi }}</a>{{ end }} {{ if .Params.url }}<a href="{{ .Params.url }}">{{ .Params.url }}</a>{{ end }}
         {{ if .Params.tags }}
