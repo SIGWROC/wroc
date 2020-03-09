@@ -1,7 +1,6 @@
 <a href="{{ .RelPermalink }}" class="no-underline pa3 bg-grey-1 br1 mb2 db raise w-100">
   <ul class="flex-ns flex-wrap mhn1-ns pa3 cite">
   {{ range first 3 .Pages }}
-    <!-- <h2 class="f3 b lh-title mb1 primary">{{ .Params.authors }}</h2> -->
     <li class="mb0">{{ .Params.authors }}. {{ .Params.title }}</li>
   {{end}}
   </ul>
