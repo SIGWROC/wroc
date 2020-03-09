@@ -46,9 +46,9 @@
     {{ end }}
   </ul>
 
-  <h3 class="f3 b lh-title mb1">Chapters and Edited Collections</h3>
+  <h3 class="f3 b lh-title mb1">Chapters</h3>
   <ul class="flex-ns flex-wrap mhn1-ns pa3 cite">
-    {{ range where .Site.Pages "Params.pubtype" "chapter" }}
+    {{ range (where .Site.Pages "Params.pubtype" "chapter") }}
     <li>
         {{ .Params.authors }}. ({{ .Params.year }}). {{ .Params.title }}. In {{ .Params.editors }}, (Ed), <em>{{ .Params.booktitle }}</em>{{ if .Params.pages }}, (pp. {{ .Params.pages }}){{ end }}. {{ .Params.publisher }}. {{ if .Params.doi }}<a href="{{ .Params.doi }}">{{ .Params.doi }}</a>{{ end }} {{ if .Params.url }}<a href="{{ .Params.url }}">{{ .Params.url }}</a>{{ end }}
         {{ if .Params.tags }}
