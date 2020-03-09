@@ -1,16 +1,136 @@
 {{ define "main" }}
 
-{{ partial "jumbotron" (dict "imageUrl" "/img/blog-index.jpg" "title" "Meta") }}
+{{ partial "jumbotron" (dict "title" "Meta") }}
 
-<div class="mw7 center">
+<div class="mw7 center ph4 pv4">
   <h2 class="meta-h2">{{ .Page.LinkTitle }}</h2>
+
+  {{ range first 1 (where .Pages "Params.pubtype" "journal") }}
+  <h3 class="f3 b lh-title mb1">Articles</h3>
   <ul class="flex-ns flex-wrap mhn1-ns pa3 cite">
-    {{ range .Pages }}
     <li>
         {{ .Params.authors }}. ({{ .Params.year }}). {{ .Params.title }}. <em>{{ .Params.journal }}</em>, {{ .Params.volume }}({{ .Params.issue }}){{ if .Params.pages }}, pp. {{ .Params.pages }}{{end}}. <a href="{{ .Params.doi }}">{{ .Params.doi }}</a>
+        {{ if .Params.tags }}
+          <p class="bib-tags">tags:
+            {{ range (.GetTerms "tags") }}
+              <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>
+            {{ end }}
+          </p>
+        {{ end }}
+        {{ if .Params.fields }}
+          <p class="bib-tags">fields:
+            {{ range (.GetTerms "fields") }}
+              <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>
+            {{ end }}
+          </p>
+        {{ end }}
+    </li>
+    {{ end }}
+    {{ range after 1 (where .Pages "Params.pubtype" "journal") }}
+    <li>
+        {{ .Params.authors }}. ({{ .Params.year }}). {{ .Params.title }}. <em>{{ .Params.journal }}</em>, {{ .Params.volume }}({{ .Params.issue }}){{ if .Params.pages }}, pp. {{ .Params.pages }}{{end}}. <a href="{{ .Params.doi }}">{{ .Params.doi }}</a>
+        {{ if .Params.tags }}
+          <p class="bib-tags">tags:
+            {{ range (.GetTerms "tags") }}
+              <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>
+            {{ end }}
+          </p>
+        {{ end }}
+        {{ if .Params.fields }}
+          <p class="bib-tags">fields:
+            {{ range (.GetTerms "fields") }}
+              <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>
+            {{ end }}
+          </p>
+        {{ end }}
     </li>
     {{ end }}
   </ul>
+
+  {{ range first 1 (where .Pages "Params.pubtype" "book") }}
+  <h3 class="f3 b lh-title mb1">Books</h3>
+  <ul class="flex-ns flex-wrap mhn1-ns pa3 cite">
+    <li>
+        {{ .Params.authors }}. ({{ .Params.year }}). <em>{{ .Params.title }}</em>. {{ .Params.publisher }}. {{ if .Params.doi }}<a href="{{ .Params.doi }}">{{ .Params.doi }}</a>{{ end }} {{ if .Params.url }}<a href="{{ .Params.url }}">{{ .Params.url }}</a>{{ end }}
+        {{ if .Params.tags }}
+          <p class="bib-tags">tags:
+            {{ range (.GetTerms "tags") }}
+              <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>
+            {{ end }}
+          </p>
+        {{ end }}
+        {{ if .Params.fields }}
+          <p class="bib-tags">fields:
+            {{ range (.GetTerms "fields") }}
+              <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>
+            {{ end }}
+          </p>
+        {{ end }}
+    </li>
+    {{ end }}
+    {{ range after 1 (where .Pages "Params.pubtype" "book") }}
+    <li>
+        {{ .Params.authors }}. ({{ .Params.year }}). <em>{{ .Params.title }}</em>. {{ .Params.publisher }}. {{ if .Params.doi }}<a href="{{ .Params.doi }}">{{ .Params.doi }}</a>{{ end }} {{ if .Params.url }}<a href="{{ .Params.url }}">{{ .Params.url }}</a>{{ end }}
+        {{ if .Params.tags }}
+          <p class="bib-tags">tags:
+            {{ range (.GetTerms "tags") }}
+              <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>
+            {{ end }}
+          </p>
+        {{ end }}
+        {{ if .Params.fields }}
+          <p class="bib-tags">fields:
+            {{ range (.GetTerms "fields") }}
+              <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>
+            {{ end }}
+          </p>
+        {{ end }}
+    </li>
+    {{ end }}
+  </ul>
+
+  {{ range first 1 (where .Pages "Params.pubtype" "chapter") }}
+  <h3 class="f3 b lh-title mb1">Chapters</h3>
+  <ul class="flex-ns flex-wrap mhn1-ns pa3 cite">
+    <li>
+        {{ .Params.authors }}. ({{ .Params.year }}). {{ .Params.title }}. In {{ .Params.editors }}, (Ed), <em>{{ .Params.booktitle }}</em>{{ if .Params.pages }}, (pp. {{ .Params.pages }}){{ end }}. {{ .Params.publisher }}. {{ if .Params.doi }}<a href="{{ .Params.doi }}">{{ .Params.doi }}</a>{{ end }} {{ if .Params.url }}<a href="{{ .Params.url }}">{{ .Params.url }}</a>{{ end }}
+        {{ if .Params.tags }}
+          <p class="bib-tags">tags:
+            {{ range (.GetTerms "tags") }}
+              <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>
+            {{ end }}
+          </p>
+        {{ end }}
+        {{ if .Params.fields }}
+          <p class="bib-tags">fields:
+            {{ range (.GetTerms "fields") }}
+              <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>
+            {{ end }}
+          </p>
+        {{ end }}
+    </li>
+    {{ end }}
+    {{ range after 1 (where .Pages "Params.pubtype" "chapter") }}
+    <li>
+        {{ .Params.authors }}. ({{ .Params.year }}). {{ .Params.title }}. In {{ .Params.editors }}, (Ed), <em>{{ .Params.booktitle }}</em>{{ if .Params.pages }}, (pp. {{ .Params.pages }}){{ end }}. {{ .Params.publisher }}. {{ if .Params.doi }}<a href="{{ .Params.doi }}">{{ .Params.doi }}</a>{{ end }} {{ if .Params.url }}<a href="{{ .Params.url }}">{{ .Params.url }}</a>{{ end }}
+        {{ if .Params.tags }}
+          <p class="bib-tags">tags:
+            {{ range (.GetTerms "tags") }}
+              <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>
+            {{ end }}
+          </p>
+        {{ end }}
+        {{ if .Params.fields }}
+          <p class="bib-tags">fields:
+            {{ range (.GetTerms "fields") }}
+              <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>
+            {{ end }}
+          </p>
+        {{ end }}
+    </li>
+    {{ end }}
+  </ul>
+
 </div>
 
 {{end}}
