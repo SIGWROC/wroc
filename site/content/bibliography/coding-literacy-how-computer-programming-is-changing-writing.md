@@ -1,7 +1,8 @@
 ---
 pubtype: book
 authors: 'Vee, Annette'
-booktitle: 'Coding Literacy: How Computer Programming Is Changing Writing'
+title: 'Coding Literacy: How Computer Programming Is Changing Writing'
+booktitle: ''
 year: '2017'
 publisher: MIT Press
 url: mitpress.mit.edu/books/coding-literacy
