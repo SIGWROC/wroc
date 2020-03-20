@@ -60,8 +60,9 @@ collections: # A list of collections the CMS should be able to edit
         name: "teaching"
         fields:
           - {label: Title, name: title, widget: string}
-          - {label: Subtitle, name: subtitle, widget: string}
+          - {label: Subtitle, name: subtitle, widget: string, required: false}
           - {label: Image, name: image, widget: image, required: false}
+          - {label: Body, name: body, widget: markdown}
           - label: Sections
             name: sections
             widget: list
