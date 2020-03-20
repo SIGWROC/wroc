@@ -5,6 +5,58 @@
 <div class="mw7 center ph4 pv4">
   <h2 class="meta-h2">{{ .Page.LinkTitle }}</h2>
 
+  {{ range first 1 (where .Pages "Params.projtype" "method") }}
+  <h3 class="f3 b lh-title mb1">Method</h3>
+  <ul class="mhn1-ns pa3 card_container--wroc-project">
+    <li class="card--wroc-project">
+      <div class="img">
+        <img src="{{ .Params.image }}" alt="" />
+      </div>
+      <h3><a href="{{ .Params.url }}">{{ .Params.title }}</a></h3>
+      <p><strong>Contributors</strong>: {{ .Params.contributors }}</p>
+      <p><strong>Description</strong>: {{ .Params.description }}</p>
+        {{ if .Params.tags }}
+          <p class="proj-tags"><strong>tags</strong>:
+            {{ range (.GetTerms "tags") }}
+              <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>
+            {{ end }}
+          </p>
+        {{ end }}
+        {{ if .Params.fields }}
+          <p class="proj-tags"><strong>fields</strong>:
+            {{ range (.GetTerms "fields") }}
+              <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>
+            {{ end }}
+          </p>
+        {{ end }}
+    </li>
+    {{ end }}
+    {{ range after 1 (where .Pages "Params.projtype" "method") }}
+    <li class="card--wroc-project">
+      <div class="img">
+        <img src="{{ .Params.image }}" alt="" />
+      </div>
+      <h3><a href="{{ .Params.url }}">{{ .Params.title }}</a></h3>
+      <p><strong>Contributors</strong>: {{ .Params.contributors }}</p>
+      <p><strong>Description</strong>: {{ .Params.description }}</p>
+        {{ if .Params.tags }}
+          <p class="proj-tags"><strong>tags</strong>:
+            {{ range (.GetTerms "tags") }}
+              <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>
+            {{ end }}
+          </p>
+        {{ end }}
+        {{ if .Params.fields }}
+          <p class="proj-tags"><strong>fields</strong>:
+            {{ range (.GetTerms "fields") }}
+              <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>
+            {{ end }}
+          </p>
+        {{ end }}
+    </li>
+  </ul>
+  {{ end }}
+
   {{ range first 1 (where .Pages "Params.pubtype" "journal") }}
   <h3 class="f3 b lh-title mb1">Articles</h3>
   <ul class="flex-ns flex-wrap mhn1-ns pa3 cite">
