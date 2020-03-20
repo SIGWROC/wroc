@@ -11,12 +11,12 @@
           justify-content: center;
   -webkit-box-align: flex-start;
           align-items: flex-start;
-  height: 650px;
+  height: 620px;
 }
 .jumbotron.pseudo--::before {
   content: '';
   right: 0;
-  top: 30px;
+  top: 0;
   bottom: 0;
   background: url(/img/network-map.svg) left bottom no-repeat;
   background-size: cover;
@@ -28,7 +28,7 @@
   opacity: 0.2;
 }
 
-.jumbotron h1 {
+/* .jumbotron h1 {
   position: relative;
   margin-top: auto;
   margin-left: auto;
@@ -41,8 +41,9 @@
   color: #52d9da;
   text-shadow: -1px -1px 0 #2f3e9c, 1px -1px 0 #2f3e9c, -1px 1px 0 #2f3e9c, 1px 1px 0 #2f3e9c, 1px 0px 0px #f98ca4, 0px 1px 0px #ec8cf9, 2px 1px 0px #ec8cf9, 1px 2px 0px #ec8cf9, 3px 2px 0px #ec8cf9, 2px 3px 0px #f98ca4, 4px 3px 0px #ec8cf9, 3px 4px 0px #ec8cf9, 5px 4px 0px #ec8cf9, 3px 5px 0px #2f3e9c, 6px 5px 0px #2f3e9c, -1px 2px 0 black, 0 3px 0 #2f3e9c, 1px 4px 0 #2f3e9c, 2px 5px 0px #2f3e9c, 2px -1px 0 #2f3e9c, 3px 0 0 #2f3e9c, 4px 1px 0 #2f3e9c, 5px 2px 0px #2f3e9c, 6px 3px 0 #2f3e9c, 7px 4px 0 #2f3e9c, 10px 10px 4px rgba(255, 186, 74, 0.8);
   opacity: 0.8;
-}
+} */
 .jumbotron h2 {
+  align-self: flex-end;
   font-size: 2em;
   font-family: 'Nanum Gothic Coding', monospace;
   color: #52d9da;

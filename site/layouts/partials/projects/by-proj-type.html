@@ -1,0 +1,26 @@
+<div class="mw7 center bg-grey-1 pv4 ph4">
+
+  <h3 class="f3 b lh-title mb1">Articles</h3>
+  <ul class="flex-ns flex-wrap mhn1-ns pa3 card--wroc-project">
+    {{ range (where .Site.Pages "Params.projtype" "method") }}
+    <li>
+        {{ .Params.contributors }} <a href="{{ .Params.doi }}">{{ .Params.doi }}</a>
+        {{ if .Params.tags }}
+          <p class="bib-tags">tags:
+            {{ range (.GetTerms "tags") }}
+              <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>
+            {{ end }}
+          </p>
+        {{ end }}
+        {{ if .Params.fields }}
+          <p class="bib-tags">fields:
+            {{ range (.GetTerms "fields") }}
+              <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>
+            {{ end }}
+          </p>
+        {{ end }}
+    </li>
+    {{ end }}
+  </ul>
+
+</div>

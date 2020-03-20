@@ -1,0 +1,7 @@
+{{ define "main" }}
+
+{{ partial "jumbotron" (dict "title" "WROC Projects") }}
+  
+  {{ partial "projects/by-proj-type.html" . }}
+
+{{end}}
