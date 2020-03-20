@@ -2,7 +2,7 @@
 projtype: method
 contributors: 'Lindgren, Chris'
 title: 'Name That Twitter Community! (nttc): Python module for social network analysis'
-url: 'https://nttc.readthedocs.io/en/latest/'
+url: nttc.readthedocs.io/en/latest/
 description: >-
   A set of functions that process and create topic models from a sample of
   community-detected Twitter networks' tweets. It also analyzes if there are
