@@ -11,5 +11,5 @@ sections:
 ---
 Test body with markdown.
 
-* Test bullet
-* Another
+- Test bullet
+- Another
