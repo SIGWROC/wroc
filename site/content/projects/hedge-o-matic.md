@@ -14,7 +14,6 @@ image: img/hedgeomatic-figure.png
 tags:
   - natural language processing
   - hedges
-  - ''
 fields:
   - computational rhetoric
   - writing studies
