@@ -1,6 +1,6 @@
 ---
 title: Teaching
-subtitle: test
+subtitle: ''
 sections:
   - heading: Course syllabi
     text: Test
@@ -9,3 +9,7 @@ sections:
   - heading: How-To Guides
     text: Test
 ---
+Test body with markdown.
+
+* Test bullet
+* Another
