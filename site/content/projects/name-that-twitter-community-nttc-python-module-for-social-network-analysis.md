@@ -19,7 +19,7 @@ tags:
   - module
   - code library
 fields:
-  - rhetoric
+  - computational rhetoric
   - writing studies
   - digital humanities
   - cultural analytics
