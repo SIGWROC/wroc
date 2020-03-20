@@ -64,16 +64,16 @@ collections: # A list of collections the CMS should be able to edit
           - {label: Image, name: image, widget: image, required: false}
           - {label: "Introduction", name: intro, widget: object, fields: [
               {label: "Heading", name: "heading", widget: string},
-              {label: "Text", name: "text", widget: "text"}]}
+              {label: "Text", name: "text", widget: markdown}]}
           - {label: "Course and Program Proposals", name: course_program, widget: object, fields: [
               {label: "Heading", name: "heading", widget: string},
-              {label: "Text", name: "text", widget: "text"}]}
+              {label: "Text", name: "text", widget: markdown}]}
           - {label: "Sample Syllabi", name: syllabi, widget: object, fields: [
               {label: "Heading", name: "heading", widget: string},
-              {label: "Text", name: "text", widget: "text"}]}
+              {label: "Text", name: "text", widget: markdown}]}
           - {label: "How to Guides", name: how_to, widget: object, fields: [
               {label: "Heading", name: "heading", widget: string},
-              {label: "Text", name: "text", widget: "text"}]}
+              {label: "Text", name: "text", widget: markdown}]}
       - file: "site/content/contact/_index.md"
         label: "Contact Page"
         name: "contact"
