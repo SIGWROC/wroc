@@ -1,0 +1,32 @@
+.card_container--wroc-project {
+  display: grid;
+  grid-gap: 10px;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr) ) ;
+}
+.card--wroc-project {
+  background: #fb1e6f2b;
+  padding: 15px;
+}
+.card--wroc-project div.img {
+  margin: auto auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  width:300px;
+  height:250px;
+}
+.card--wroc-project div.img img {
+  display: block;
+  width: 100%;
+  height: inherit;
+}
+.card--wroc-project h3 {
+  font-size: 1em;
+}
+.card--wroc-project p {
+  font-size: 0.85em;
+}
+.proj-tags {
+  font-size: 0.5em;
+  margin-top: 10px;
+  margin-bottom: 0;
+}

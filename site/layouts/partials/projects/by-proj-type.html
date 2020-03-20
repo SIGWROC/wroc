@@ -1,19 +1,24 @@
 <div class="mw7 center bg-grey-1 pv4 ph4">
 
-  <h3 class="f3 b lh-title mb1">Articles</h3>
-  <ul class="flex-ns flex-wrap mhn1-ns pa3 card--wroc-project">
+  <h3 class="f3 b lh-title mb1">Method</h3>
+  <ul class="mhn1-ns pa3 card_container--wroc-project">
     {{ range (where .Site.Pages "Params.projtype" "method") }}
-    <li>
-        {{ .Params.contributors }} <a href="{{ .Params.doi }}">{{ .Params.doi }}</a>
+    <li class="card--wroc-project">
+      <div class="img">
+        <img src="{{ .Params.image }}" alt="" />
+      </div>
+      <h3><a href="{{ .Params.url }}">{{ .Params.title }}</a></h3>
+      <p><strong>Contributors</strong>: {{ .Params.contributors }}</p>
+      <p><strong>Description</strong>: {{ .Params.description }}</p>
         {{ if .Params.tags }}
-          <p class="bib-tags">tags:
+          <p class="proj-tags"><strong>tags</strong>:
             {{ range (.GetTerms "tags") }}
               <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>
             {{ end }}
           </p>
         {{ end }}
         {{ if .Params.fields }}
-          <p class="bib-tags">fields:
+          <p class="proj-tags"><strong>fields</strong>:
             {{ range (.GetTerms "fields") }}
               <a href="{{ .Permalink }}">{{ .LinkTitle }}</a>
             {{ end }}
