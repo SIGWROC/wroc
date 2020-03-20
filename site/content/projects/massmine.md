@@ -15,4 +15,5 @@ tags:
 fields:
   - computational rhetoric
   - cultural analytics
+  - digital humanities
 ---
