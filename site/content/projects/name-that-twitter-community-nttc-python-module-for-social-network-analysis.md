@@ -1,6 +1,6 @@
 ---
 projtype: method
-contributors: 'Lindgren, Chris'
+contributors: Chris Lindgren
 title: 'Name That Twitter Community! (nttc): Python module for social network analysis'
 url: nttc.readthedocs.io/en/latest/
 description: >-
