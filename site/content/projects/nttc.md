@@ -2,7 +2,7 @@
 projtype: method
 contributors: Chris Lindgren
 title: 'NTTC: A Python module for social network analysis'
-url: nttc.readthedocs.io/en/latest/
+ext_url: https://nttc.readthedocs.io/en/latest/
 description: >-
   A set of functions that process and create topic models from a sample of
   community-detected Twitter networks' tweets. It assumes you have a desire to

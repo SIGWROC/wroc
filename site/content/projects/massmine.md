@@ -2,7 +2,7 @@
 projtype: method
 contributors: Nick Van Horn & Aaron Beveridge
 title: MassMine
-url: 'www.massmine.org'
+ext_url: 'http://www.massmine.org'
 description: >-
   MassMine is a command line tool designed for researchers to simplify the
   collection and use of data from online sources such as social media networks.

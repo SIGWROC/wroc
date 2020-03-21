@@ -2,7 +2,7 @@
 projtype: method
 contributors: Ryan Omizo and Bill Hart-Davidson
 title: Hedge-O-Matic
-url: hedgeomatic.cal.msu.edu/hedgeomatic/
+ext_url: 'http://hedgeomatic.cal.msu.edu/hedgeomatic'
 description: >-
   The Hedge-O-Matic tokenizes and classifies sentences as either a hedge or 
   non-hedge by a Support Vector Machine trained on a corpus of hedgey and 

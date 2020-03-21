@@ -1,7 +1,9 @@
+.card_container { padding: 2em; }
 .card_container--wroc-project {
   display: grid;
   grid-gap: 10px;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr) ) ;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  padding: 1em;
 }
 .card--wroc-project {
   background: #fb1e6f2b;
@@ -11,8 +13,19 @@
   margin: auto auto;
   margin-top: 15px;
   margin-bottom: 15px;
-  width:300px;
-  height:250px;
+  width: 300px;
+  height: 250px;
+}
+@media screen and (max-width: 435px) {
+  .card--wroc-project div.img {
+    margin: auto auto;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 225px;
+    height: 175px;
+  }
+  .card_container {padding:0;}
+  .card_container--wroc-project {padding:0;}
 }
 .card--wroc-project div.img img {
   display: block;

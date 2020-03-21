@@ -5,7 +5,7 @@ title: Women’s ways of structuring data
 year: '2015'
 journal: 'Ada: A Journal of Gender, New Media, & Technology'
 volume: '8'
-url: adanewmedia.org/2015/11/issue8-masters/
+ext_url: https://adanewmedia.org/2015/11/issue8-masters/
 tags:
   - data literacy
   - infrastructure

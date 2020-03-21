@@ -1,13 +1,13 @@
-<div class="mw8 center bg-grey-1 pv4 ph4">
+<div class="card_container mw8 center bg-grey-1">
 
   <h3 class="f3 b lh-title mb1">Method</h3>
-  <ul class="mhn1-ns pa3 card_container--wroc-project">
+  <ul class="mhn1-ns card_container--wroc-project">
     {{ range (where .Site.Pages "Params.projtype" "method") }}
     <li class="card--wroc-project">
       <div class="img">
         <img src="{{ .Params.image }}" alt="" />
       </div>
-      <h3><a href="{{ .Params.url }}">{{ .Params.title }}</a></h3>
+      <h3><a href="{{ .Params.ext_url }}" target="_blank" rel="noopener">{{ .Params.title }}</a></h3>
       <p><strong>Contributors</strong>: {{ .Params.contributors }}</p>
       <p><strong>Description</strong>: {{ .Params.description }}</p>
         {{ if .Params.tags }}

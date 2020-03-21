@@ -3,6 +3,9 @@ ul.cite li {
   text-indent: -0.5in;
   margin-bottom: 25px;
 }
+ul.cite li a:hover {
+  text-decoration: none;
+}
 li p.bib-tags {
   margin-left: 0.5in;
   margin-bottom: 0;

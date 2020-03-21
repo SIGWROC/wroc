@@ -4,7 +4,7 @@
   <ul class="flex-ns flex-wrap mhn1-ns pa3 cite">
     {{ range (where .Site.Pages "Params.pubtype" "journal") }}
     <li>
-        {{ .Params.authors }}. ({{ .Params.year }}). {{ .Params.title }}. <em>{{ .Params.journal }}</em>, {{ .Params.volume }}({{ .Params.issue }}){{ if .Params.pages }}, pp. {{ .Params.pages }}{{end}}. <a href="{{ .Params.doi }}">{{ .Params.doi }}</a>
+        {{ .Params.authors }}. ({{ .Params.year }}). {{ if .Params.ext_url }}<a href="{{ .Params.ext_url }}">{{ .Params.title }}</a>.{{ else }}{{ .Params.title }}.{{ end }} <em>{{ .Params.journal }}</em>, {{ .Params.volume }}{{ if .Params.issue }}({{ .Params.issue }}){{ end }}{{ if .Params.pages }}, pp. {{ .Params.pages }}{{end}}. {{ if .Params.doi }}<a href="{{ .Params.doi }}">{{ .Params.doi }}</a>{{ end }}
         {{ if .Params.tags }}
           <p class="bib-tags">tags:
             {{ range (.GetTerms "tags") }}
