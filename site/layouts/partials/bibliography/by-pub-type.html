@@ -4,7 +4,7 @@
   <ul class="flex-ns flex-wrap mhn1-ns pa3 cite">
     {{ range (where .Site.Pages "Params.pubtype" "journal") }}
     <li>
-        {{ .Params.authors }}. ({{ .Params.year }}). {{ if .Params.ext_url }}<a href="{{ .Params.ext_url }}">{{ .Params.title }}</a>.{{ else }}{{ .Params.title }}.{{ end }} <em>{{ .Params.journal }}</em>, {{ .Params.volume }}{{ if .Params.issue }}({{ .Params.issue }}){{ end }}{{ if .Params.pages }}, pp. {{ .Params.pages }}{{end}}. {{ if .Params.doi }}<a href="{{ .Params.doi }}">{{ .Params.doi }}</a>{{ end }}
+        {{ .Params.authors }}. ({{ .Params.year }}). {{ if .Params.ext_url }}<a href="{{ .Params.ext_url }}" target="_blank" rel="noopener">{{ .Params.title }}</a>.{{ else }}{{ .Params.title }}.{{ end }} <em>{{ .Params.journal }}</em>, {{ .Params.volume }}{{ if .Params.issue }}({{ .Params.issue }}){{ end }}{{ if .Params.pages }}, pp. {{ .Params.pages }}{{end}}. {{ if .Params.doi }}<a href="{{ .Params.doi }}">{{ .Params.doi }}</a>{{ end }}
         {{ if .Params.tags }}
           <p class="bib-tags">tags:
             {{ range (.GetTerms "tags") }}
@@ -27,7 +27,7 @@
   <ul class="flex-ns flex-wrap mhn1-ns pa3 cite">
     {{ range (where .Site.Pages "Params.pubtype" "book") }}
     <li>
-        {{ .Params.authors }}. ({{ .Params.year }}). <em>{{ .Params.title }}</em>. {{ .Params.publisher }}. {{ if .Params.doi }}<a href="{{ .Params.doi }}">{{ .Params.doi }}</a>{{ end }} {{ if .Params.url }}<a href="{{ .Params.url }}">{{ .Params.url }}</a>{{ end }}
+        {{ .Params.authors }}. ({{ .Params.year }}). {{ if .Params.ext_url }}<a href="{{ .Params.ext_url }}" target="_blank" rel="noopener"><em>{{ .Params.title }}</em></a>.{{else}}<em>{{ .Params.title }}</em>.{{ end }} {{ .Params.publisher }}. {{ if .Params.doi }}<a href="{{ .Params.doi }}" target="_blank" rel="noopener">{{ .Params.doi }}</a>{{ end }}
         {{ if .Params.tags }}
           <p class="bib-tags">tags:
             {{ range (.GetTerms "tags") }}
@@ -50,7 +50,7 @@
   <ul class="flex-ns flex-wrap mhn1-ns pa3 cite">
     {{ range (where .Site.Pages "Params.pubtype" "chapter") }}
     <li>
-        {{ .Params.authors }}. ({{ .Params.year }}). {{ .Params.title }}. In {{ .Params.editors }}, (Ed), <em>{{ .Params.booktitle }}</em>{{ if .Params.pages }}, (pp. {{ .Params.pages }}){{ end }}. {{ .Params.publisher }}. {{ if .Params.doi }}<a href="{{ .Params.doi }}">{{ .Params.doi }}</a>{{ end }} {{ if .Params.url }}<a href="{{ .Params.url }}">{{ .Params.url }}</a>{{ end }}
+        {{ .Params.authors }}. ({{ .Params.year }}). {{ if .Params.ext_url }}<a href="{{ .Params.ext_url }}" target="_blank" rel="noopener"><em>{{ .Params.title }}</em></a>.{{else}}<em>{{ .Params.title }}</em>.{{ end }} In {{ .Params.editors }}, (Ed), <em>{{ .Params.booktitle }}</em>{{ if .Params.pages }}, (pp. {{ .Params.pages }}){{ end }}. {{ .Params.publisher }}. {{ if .Params.doi }}<a href="{{ .Params.doi }}">{{ .Params.doi }}</a>{{ end }} {{ if .Params.url }}<a href="{{ .Params.url }}">{{ .Params.url }}</a>{{ end }}
         {{ if .Params.tags }}
           <p class="bib-tags">tags:
             {{ range (.GetTerms "tags") }}
