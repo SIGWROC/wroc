@@ -120,14 +120,14 @@ collections: # A list of collections the CMS should be able to edit
         name: "cccc_group"
         fields:
           - {label: Title, name: title, widget: string}
-          - {label: Image, name: image, widget: image}
-          - label: CCCC
-            name: cccc
+          - {label: Image, name: image, widget: image, required: false}
+          - label: "CCCC Meetings"
+            name: cccc_meetings
             widget: list
             fields:
               - {label: Heading, name: heading, widget: string}
               - {label: Text, name: text, widget: text}
-              - {label: Image, name: imageUrl, widget: image}
+              - {label: Image, name: imageUrl, widget: image, required: false}
               - label: "Meeting Agendo"
                 name: "meeting_agenda"
                 widget: "file"
@@ -139,7 +139,8 @@ collections: # A list of collections the CMS should be able to edit
               - label: "Meeting Notes"
                 name: "meeting_notes"
                 widget: "file"
-                default: "/uploads/meeting-notes"
+                assetDir: "site/static/upload"
+                public_folder: "upload"
                 media_library:
                   config:
                     multiple: false
