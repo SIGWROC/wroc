@@ -1,7 +1,7 @@
-<div class="mw7 center bg-grey-1 pv4 ph4">
+<div class="mw7 center bg-grey-1 citation-container">
 
   <h3 class="f3 b lh-title mb1">Articles</h3>
-  <ul class="flex-ns flex-wrap mhn1-ns pa3 cite">
+  <ul class="flex-ns flex-wrap mhn1-ns cite">
     {{ range (where .Site.Pages "Params.pubtype" "journal") }}
     <li>
         {{ .Params.authors }}. ({{ .Params.year }}). {{ if .Params.ext_url }}<a href="{{ .Params.ext_url }}" target="_blank" rel="noopener">{{ .Params.title }}</a>.{{ else }}{{ .Params.title }}.{{ end }} <em>{{ .Params.journal }}</em>, {{ .Params.volume }}{{ if .Params.issue }}({{ .Params.issue }}){{ end }}{{ if .Params.pages }}, pp. {{ .Params.pages }}{{end}}. {{ if .Params.doi }}<a href="{{ .Params.doi }}">{{ .Params.doi }}</a>{{ end }}
@@ -24,7 +24,7 @@
   </ul>
 
   <h3 class="f3 b lh-title mb1">Books</h3>
-  <ul class="flex-ns flex-wrap mhn1-ns pa3 cite">
+  <ul class="flex-ns flex-wrap mhn1-ns cite">
     {{ range (where .Site.Pages "Params.pubtype" "book") }}
     <li>
         {{ .Params.authors }}. ({{ .Params.year }}). {{ if .Params.ext_url }}<a href="{{ .Params.ext_url }}" target="_blank" rel="noopener"><em>{{ .Params.title }}</em></a>.{{else}}<em>{{ .Params.title }}</em>.{{ end }} {{ .Params.publisher }}. {{ if .Params.doi }}<a href="{{ .Params.doi }}" target="_blank" rel="noopener">{{ .Params.doi }}</a>{{ end }}
@@ -47,7 +47,7 @@
   </ul>
 
   <h3 class="f3 b lh-title mb1">Chapters</h3>
-  <ul class="flex-ns flex-wrap mhn1-ns pa3 cite">
+  <ul class="flex-ns flex-wrap mhn1-ns cite">
     {{ range (where .Site.Pages "Params.pubtype" "chapter") }}
     <li>
         {{ .Params.authors }}. ({{ .Params.year }}). {{ if .Params.ext_url }}<a href="{{ .Params.ext_url }}" target="_blank" rel="noopener"><em>{{ .Params.title }}</em></a>.{{else}}<em>{{ .Params.title }}</em>.{{ end }} In {{ .Params.editors }}, (Ed), <em>{{ .Params.booktitle }}</em>{{ if .Params.pages }}, (pp. {{ .Params.pages }}){{ end }}. {{ .Params.publisher }}. {{ if .Params.doi }}<a href="{{ .Params.doi }}">{{ .Params.doi }}</a>{{ end }} {{ if .Params.url }}<a href="{{ .Params.url }}">{{ .Params.url }}</a>{{ end }}

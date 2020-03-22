@@ -1,3 +1,9 @@
+.citation-container {
+  padding: 2em;
+}
+ul.cite {
+  padding: 1em;
+}
 ul.cite li {
   margin-left: 0.5in;
   text-indent: -0.5in;
@@ -9,4 +15,19 @@ ul.cite li a:hover {
 li p.bib-tags {
   margin-left: 0.5in;
   margin-bottom: 0;
+}
+@media screen and (max-width:579px) {
+  .citation-container {
+    padding: 0.1em;
+  }
+  ul.cite {
+    padding: 0.2em;
+  }
+  ul.cite li {
+    margin-left: 0.25em;
+    text-indent: -0.5em;
+  }
+  li p.bib-tags {
+    margin-left: 0.25em;
+  }
 }

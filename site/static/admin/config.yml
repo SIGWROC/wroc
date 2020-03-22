@@ -102,7 +102,7 @@ collections: # A list of collections the CMS should be able to edit
               - label: Text
                 name: text
                 widget: text
-      - file: "site/content/values/_index.md"
+      - file: "site/content/about/_index.md"
         label: "Values Page"
         name: "values"
         fields:
@@ -115,7 +115,33 @@ collections: # A list of collections the CMS should be able to edit
               - {label: Heading, name: heading, widget: string}
               - {label: Text, name: text, widget: text}
               - {label: Image, name: imageUrl, widget: image}
-
+      - file: "site/content/about/cccc_group/_index.md"
+        label: "CCCC Group"
+        name: "cccc_group"
+        fields:
+          - {label: Title, name: title, widget: string}
+          - {label: Image, name: image, widget: image}
+          - label: CCCC
+            name: cccc
+            widget: list
+            fields:
+              - {label: Heading, name: heading, widget: string}
+              - {label: Text, name: text, widget: text}
+              - {label: Image, name: imageUrl, widget: image}
+              - label: "Meeting Agendo"
+                name: "meeting_agenda"
+                widget: "file"
+                default: "/uploads/meeting-notes"
+                media_library:
+                  config:
+                    multiple: false
+              - label: "Meeting Notes"
+                name: "meeting_notes"
+                widget: "file"
+                default: "/uploads/meeting-notes"
+                media_library:
+                  config:
+                    multiple: false
 taxonomies:
   tag: tags
   category: categories
