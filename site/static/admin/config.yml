@@ -131,7 +131,8 @@ collections: # A list of collections the CMS should be able to edit
               - label: "Meeting Agendo"
                 name: "meeting_agenda"
                 widget: "file"
-                default: "/uploads/meeting-notes"
+                assetDir: "site/static/upload"
+                public_folder: "upload"
                 media_library:
                   config:
                     multiple: false
