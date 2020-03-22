@@ -131,16 +131,16 @@ collections: # A list of collections the CMS should be able to edit
               - label: "Meeting Agendo"
                 name: "meeting_agenda"
                 widget: "file"
-                assetDir: "site/static/upload"
-                public_folder: "upload"
+                assetDir: "site/static/upload/meetings"
+                public_folder: "upload/meetings"
                 media_library:
                   config:
                     multiple: false
               - label: "Meeting Notes"
                 name: "meeting_notes"
                 widget: "file"
-                assetDir: "site/static/upload"
-                public_folder: "upload"
+                assetDir: "site/static/upload/meetings"
+                public_folder: "upload/meetings"
                 media_library:
                   config:
                     multiple: false
