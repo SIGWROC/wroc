@@ -42,14 +42,14 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Tags", name: "tags", widget: "list"}
       - {label: "Fields",name: "fields", widget: "list"}
   - name: "cccc_meetings"
-    label: "CCCC Meetings"
+    label: "4Cs Group"
     folder: "site/content/cccc_meetings"
     create: true
     fields:
       - {label: Heading, name: heading, widget: string}
       - {label: Text, name: text, widget: text}
       - {label: Image, name: imageUrl, widget: image, required: false}
-      - {label: "Meeting Agenda", name: "meeting_agenda", widget: "file", assetDir: "site/static/upload/meetings", media_folder: "site/static/uploads/meetings", public_folder: "uploads/meetings", config: {multiple: false}}
+      - {label: "Meeting Agenda", name: "meeting_agenda", widget: "file", assetDir: "site/static/upload/meetings", media_folder: "../../static/uploads/meetings", public_folder: "uploads/meetings", config: {multiple: false}}
   - name: "post" # Used in routes, ie.: /admin/collections/:slug/edit
     label: "Post" # Used in the UI, ie.: "New Post"
     folder: "site/content/post" # The path to the folder where the documents are stored
