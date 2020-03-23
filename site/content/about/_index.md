@@ -18,4 +18,7 @@ cccc_meetings:
   - heading: 2017 Meeting
     text: Test text
     agenda: ../../uploads/meetings/4c17-sigwroc-proposal.pdf
+  - heading: 2020 Meeting
+    text: Test text
+    agenda: ../../static/uploads/meetings/4c20-sigwroc-proposal.pdf
 ---
