@@ -124,8 +124,8 @@ collections: # A list of collections the CMS should be able to edit
               - {label: Heading, name: heading, widget: string}
               - {label: Text, name: text, widget: text}
               - {label: Image, name: imageUrl, widget: image, required: false}
-              - {label: "Meeting Agenda", name: "agenda", widget: "file", assetDir: "uploads/meetings", media_folder: "../uploads/meetings", public_folder: "../uploads/meetings", config: {multiple: false}}
-              - {label: "Meeting Notes", name: "notes", widget: "file", assetDir: "uploads/meetings", media_folder: "../uploads/meetings", public_folder: "../uploads/meetings", config: {multiple: false}}
+              - {label: "Meeting Agenda", name: "agenda", widget: "file", assetDir: "uploads/meetings", media_folder: "../uploads/meetings", public_folder: "../uploads/meetings", config: {multiple: false, required: false}
+              - {label: "Meeting Notes", name: "notes", widget: "file", assetDir: "uploads/meetings", media_folder: "../uploads/meetings", public_folder: "../uploads/meetings", config: {multiple: false}, required: false}
 taxonomies:
   tag: tags
   category: categories
