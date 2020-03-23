@@ -1,24 +1,17 @@
 ---
-title: Values
+title: About
 image: img/illustrations-meeting-space.svg
-values:
-  - heading: Caffeine-Power
-    text: |
-      Coffee powers our digital infrastructure. It's true.
-    imageUrl: img/blog-index.jpg
-  - heading: Single origin
+sections:
+  - heading: Exigence
     text: >
-      Single-origin coffee is coffee grown within a single known geographic
-      origin. Sometimes, this is a single farm or a specific collection of beans
-      from a single country. The name of the coffee is then usually the place it
-      was grown to whatever degree available.
-    imageUrl: /img/about-single-origin.jpg
-  - heading: Sustainable maintenance
-    text: >
-      Sustainable maintenance is coding in sustainable ways based on an
-      understanding of ecosystem services, the study of relationships between
-      organisms and their environment. What users need and where and how their
-      needs change are a matter of choice and careful consideration for nature
-      and communities.
+      For over 30 years, writing and rhetoric scholars have explored the 
+      relationships between programming, writing, and rhetoric. This body 
+      of work has built from the premise that code is writing: it has dynamic 
+      purposes, authors, and audiences both human and machine. Out of this 
+      legacy, a growing number of scholars are actively conducting research 
+      and developing pedagogies rooted in understanding the communicative and 
+      rhetorical dimensions of computer programming. As a means to sustain this 
+      scholarly community, we formed a NCTE/CCCC Special Interest group in 2017,
+      so we could solidify our field and presence across the discipline.
     imageUrl: img/dig-poster-2.png
 ---

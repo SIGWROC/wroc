@@ -1,0 +1,14 @@
+{{ define "main" }}
+  <!-- For each posting page, but I don't want this feature -->
+  <div class="mw6 center ph3 pv4">
+    <h1 class="f2 lh-title b mb3">{{.Title}}</h1>
+    <ul>
+    {{ range (where .Pages "Section" "bibliography") }}
+    <li>
+        {{ .Title }}
+    </li>
+    {{ end }}
+  </ul>
+    <p>More</p>
+  </div>
+{{ end }}

@@ -41,6 +41,15 @@ collections: # A list of collections the CMS should be able to edit
       - {label: Image, name: image, widget: image, required: false}
       - {label: "Tags", name: "tags", widget: "list"}
       - {label: "Fields",name: "fields", widget: "list"}
+  - name: "cccc_meetings"
+    label: "CCCC Meetings"
+    folder: "site/content/cccc_meetings"
+    create: true
+    fields:
+      - {label: Heading, name: heading, widget: string}
+      - {label: Text, name: text, widget: text}
+      - {label: Image, name: imageUrl, widget: image, required: false}
+      - {label: "Meeting Agenda", name: "meeting_agenda", widget: "file", assetDir: "site/static/upload/meetings", media_folder: "site/static/uploads/meetings", public_folder: "uploads/meetings", config: {multiple: false}}
   - name: "post" # Used in routes, ie.: /admin/collections/:slug/edit
     label: "Post" # Used in the UI, ie.: "New Post"
     folder: "site/content/post" # The path to the folder where the documents are stored
@@ -103,47 +112,18 @@ collections: # A list of collections the CMS should be able to edit
                 name: text
                 widget: text
       - file: "site/content/about/_index.md"
-        label: "Values Page"
-        name: "values"
+        label: "About Page"
+        name: "about"
         fields:
           - {label: Title, name: title, widget: string}
           - {label: Image, name: image, widget: image}
-          - label: Values
-            name: values
+          - label: Sections
+            name: sections
             widget: list
             fields:
               - {label: Heading, name: heading, widget: string}
               - {label: Text, name: text, widget: text}
               - {label: Image, name: imageUrl, widget: image}
-      - file: "site/content/about/cccc_group/_index.md"
-        label: "CCCC Group"
-        name: "cccc_group"
-        fields:
-          - {label: Title, name: title, widget: string}
-          - {label: Image, name: image, widget: image, required: false}
-          - label: "CCCC Meetings"
-            name: cccc_meetings
-            widget: list
-            fields:
-              - {label: Heading, name: heading, widget: string}
-              - {label: Text, name: text, widget: text}
-              - {label: Image, name: imageUrl, widget: image, required: false}
-              - label: "Meeting Agendo"
-                name: "meeting_agenda"
-                widget: "file"
-                assetDir: "site/static/upload/meetings"
-                public_folder: "upload/meetings"
-                media_library:
-                  config:
-                    multiple: false
-              - label: "Meeting Notes"
-                name: "meeting_notes"
-                widget: "file"
-                assetDir: "site/static/upload/meetings"
-                public_folder: "upload/meetings"
-                media_library:
-                  config:
-                    multiple: false
 taxonomies:
   tag: tags
   category: categories
