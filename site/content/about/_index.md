@@ -17,5 +17,5 @@ sections:
 cccc_meetings:
   - heading: 2017 Meeting
     text: Test text
-    agenda: ../../static/uploads/meetings/4c17-sigwroc-proposal.pdf
+    agenda: ../../uploads/meetings/4c17-sigwroc-proposal.pdf
 ---
