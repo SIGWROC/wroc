@@ -14,4 +14,13 @@ sections:
       scholarly community, we formed a NCTE/CCCC Special Interest group in 2017,
       so we could solidify our field and presence across the discipline.
     imageUrl: img/dig-poster-2.png
+cccc_meetings:
+  - heading: 2017 Meeting
+    text: Example text for 2017
+    agenda: ../uploads/meetings/4c17-sigwroc-proposal.pdf
+  - heading: 2018 Meeting
+    text: More example text
+  - heading: 2020 Meeting
+    text: Example text
+    agenda: ../uploads/meetings/4c20-sigwroc-proposal.pdf
 ---
