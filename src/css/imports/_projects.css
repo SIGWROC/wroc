@@ -1,11 +1,13 @@
 .card_container { padding: 2em; }
-.card_container--wroc-project {
+.card_container--wroc-project,
+.card_container--wroc-meeting {
   display: grid;
   grid-gap: 10px;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
   padding: 1em;
 }
-.card--wroc-project {
+.card--wroc-project,
+.card--wroc-meeting {
   background: #fb1e6f2b;
   padding: 15px;
 }

@@ -16,11 +16,11 @@ sections:
     imageUrl: img/dig-poster-2.png
 cccc_meetings:
   - heading: 2017 Meeting
-    text: Example text for 2017
+    text: More info to come ...
     agenda: ../uploads/meetings/4c17-sigwroc-proposal.pdf
   - heading: 2018 Meeting
-    text: More example text
+    text: More info to come ..
   - heading: 2020 Meeting
-    text: Example text
+    text: More info to come ..
     agenda: ../uploads/meetings/4c20-sigwroc-proposal.pdf
 ---

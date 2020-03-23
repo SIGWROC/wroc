@@ -1,15 +1,17 @@
-<div class="meetings_groups_container">
+<div class="card_container">
   <h3 class="f3 b lh-title mb1">Meetings</h3>
+  <div class="card_container--wroc-meeting">
     {{ range .Params.cccc_meetings }}
-    <div class="meetings_groups">
+    <div class="card--wroc-meeting">
       <strong>{{ .heading  }}</strong>
       <p>{{ .text }}</p>
       <em>Documents</em>
-      <ul>
+      <ul class="meetings_groups">
         {{if .agenda }}<li><a href="{{ .agenda  }}">Agenda</a></li>
         {{else if .notes }}<li><a href="{{ .notes  }}">Agenda</a></li>
         {{else }}<li>None available</li>{{end}}
       </ul>
     </div>
     {{ end }}
+  </div>
 </div>
