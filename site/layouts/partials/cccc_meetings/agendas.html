@@ -1,6 +1,15 @@
-<h3 class="f3 b lh-title mb1">Meetings</h3>
-{{ range .Params.cccc_meetings }}
-<ul>
-  <li>{{.heading}}: <a href="{{ .agenda  }}">Agenda</a></li>
-</ul>
-{{ end }}
+<div class="meetings_groups_container">
+  <h3 class="f3 b lh-title mb1">Meetings</h3>
+    {{ range .Params.cccc_meetings }}
+    <div class="meetings_groups">
+      <strong>{{ .heading  }}</strong>
+      <p>{{ .text }}</p>
+      <em>Documents</em>
+      <ul>
+        {{if .agenda }}<li><a href="{{ .agenda  }}">Agenda</a></li>
+        {{else if .notes }}<li><a href="{{ .notes  }}">Agenda</a></li>
+        {{else }}<li>None available</li>{{end}}
+      </ul>
+    </div>
+    {{ end }}
+</div>

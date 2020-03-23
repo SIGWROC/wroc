@@ -1,0 +1,7 @@
+.meetings_groups {
+  padding: 20px;
+}
+.meetings_groups ul li {
+  list-style-type: disc;
+  margin-left: 1em;
+}
