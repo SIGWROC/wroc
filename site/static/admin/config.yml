@@ -41,15 +41,6 @@ collections: # A list of collections the CMS should be able to edit
       - {label: Image, name: image, widget: image, required: false}
       - {label: "Tags", name: "tags", widget: "list"}
       - {label: "Fields",name: "fields", widget: "list"}
-  - name: "cccc_meetings"
-    label: "4Cs Group"
-    folder: "site/content/cccc_meetings"
-    create: true
-    fields:
-      - {label: Heading, name: heading, widget: string}
-      - {label: Text, name: text, widget: text}
-      - {label: Image, name: imageUrl, widget: image, required: false}
-      - {label: "Meeting Agenda", name: "meeting_agenda", widget: "file", assetDir: "../../static/uploads/meetings", media_folder: "../../static/uploads/meetings", public_folder: "../../static/uploads/meetings", config: {multiple: false}}
   - name: "post" # Used in routes, ie.: /admin/collections/:slug/edit
     label: "Post" # Used in the UI, ie.: "New Post"
     folder: "site/content/post" # The path to the folder where the documents are stored
@@ -124,6 +115,16 @@ collections: # A list of collections the CMS should be able to edit
               - {label: Heading, name: heading, widget: string}
               - {label: Text, name: text, widget: text}
               - {label: Image, name: imageUrl, widget: image}
+          - label: "4Cs Meetings"
+            name: "cccc_meetings"
+            widget: list
+            folder: "site/content/cccc_meetings"
+            create: true
+            fields:
+              - {label: Heading, name: heading, widget: string}
+              - {label: Text, name: text, widget: text}
+              - {label: Image, name: imageUrl, widget: image, required: false}
+              - {label: "Meeting Agenda", name: "agenda", widget: "file", assetDir: "static/uploads/meetings", media_folder: "../../static/uploads/meetings", public_folder: "../../static/uploads/meetings", config: {multiple: false}}
 taxonomies:
   tag: tags
   category: categories
